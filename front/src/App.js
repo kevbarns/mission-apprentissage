@@ -6,9 +6,10 @@ import ScrollToTop from "./components/ScrollToTop";
 import {
   Landing,
   NotFound,
+  Services
 } from "./pages";
 
-// import routes from "./routes.json";
+import routes from "./routes.json";
 
 import "./App.css";
 
@@ -18,6 +19,7 @@ const App = () => {
       <ScrollToTop />
       <Switch>
         <Route exact path="/" component={Landing} />
+        <Route path={routes.SERVICES} component={Services} />
         <Route component={NotFound} />
       </Switch>
     </Layout>
