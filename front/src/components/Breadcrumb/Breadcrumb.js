@@ -12,8 +12,8 @@ export default () => {
 
   return (
     <Breadcrumb tag="nav" listTag="div">
-      {breadcrumbs.map(({ match, breadcrumb }) => (
-        <BreadcrumbItem tag={match.url !== current ? "a" : "_"} href={match.url}>
+      {breadcrumbs.map(({ match, breadcrumb }, key) => (
+        <BreadcrumbItem key={key} tag={match.url !== current ? "a" : "div"} href={match.url}>
           {breadcrumb}
         </BreadcrumbItem>
       ))}
