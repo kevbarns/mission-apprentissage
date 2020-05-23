@@ -31,7 +31,7 @@ const TopBar = () => {
           <Nav className="mr-auto" navbar>
             <NavItem>
               <Link to={routes.SERVICES} className={"nav-link link"}>
-                Services
+                Catalogue des Services
               </Link>
             </NavItem>
           </Nav>

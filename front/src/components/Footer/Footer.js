@@ -8,11 +8,11 @@ import "./footer.css";
 const Footer = () => {
   return (
     <footer className="footerNav">
-      <section className="name ml-3">My project</section>
+      <section className="name ml-3">Mission Apprentissage</section>
       <section className="sitemap">
         <div>
           <h5>Navigation</h5>
-          <Link to={routes.SERVICES}>Liste des services</Link>
+          <Link to={routes.SERVICES}>Catalogue des Services</Link>
         </div>
         <div>
           <h5>Support</h5>
