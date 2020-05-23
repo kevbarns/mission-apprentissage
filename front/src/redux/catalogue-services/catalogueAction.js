@@ -19,10 +19,9 @@ export function fetchCatalogue() {
   return (dispatch) => {
     dispatch(fetchCatalogueRequest());
     return getCatalogue()
-      .then((data) => {
-        console.log("FETCH", data.data);
-        dispatch(fetchCatalogueSuccess(data.data));
-        return data.data;
+      .then(({ data }) => {
+        dispatch(fetchCatalogueSuccess(data.services));
+        return data.services;
       })
       .catch((error) => dispatch(fetchCatalogueFailure(error)));
   };
