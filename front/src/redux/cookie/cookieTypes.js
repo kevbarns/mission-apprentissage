@@ -1,0 +1,1 @@
+export const COOKIE_STATE = "COOKIE_STATE"
