@@ -1,0 +1,15 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "front-mapp-dev-20200522172641-authRole",
+            "UnauthRoleArn": "arn:aws:iam::049517227881:role/front-mapp-dev-20200522172641-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::049517227881:role/front-mapp-dev-20200522172641-authRole",
+            "Region": "eu-west-1",
+            "DeploymentBucketName": "front-mapp-dev-20200522172641-deployment",
+            "UnauthRoleName": "front-mapp-dev-20200522172641-unauthRole",
+            "StackName": "front-mapp-dev-20200522172641",
+            "StackId": "arn:aws:cloudformation:eu-west-1:049517227881:stack/front-mapp-dev-20200522172641/a34835c0-9c40-11ea-83cb-0234dfcdb558",
+            "AmplifyAppId": "d1ffntzqo1xa3l"
+        }
+    }
+}
