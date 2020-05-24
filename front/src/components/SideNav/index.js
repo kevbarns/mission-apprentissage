@@ -1,2 +1,2 @@
-import Navbar from "./SideNav";
-export default Navbar;
+import SideNav from "./SideNav";
+export default SideNav;
