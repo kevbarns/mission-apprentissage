@@ -1,4 +1,4 @@
-import { Landing, NotFound, Services } from "./pages";
+import { Landing, Services } from "./pages";
 
 export default [
   {
@@ -40,10 +40,5 @@ export default [
   {
     title: "Contact",
     icon: "icon-esd-contact",
-  },
-  {
-    component: NotFound,
-    path: "/404",
-    title: "404"
   },
 ];

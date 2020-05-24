@@ -7,6 +7,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import routes from "./routes";
 
 import "./App.css";
+import { NotFound } from "./pages";
 
 const App = () => (
   <Layout>
@@ -15,6 +16,7 @@ const App = () => (
       {routes.map(({ path, component }, key) => (
         <Route exact path={path} key={key} component={component} />
       ))}
+      <Route component={NotFound} />
     </Switch>
   </Layout>
 );
