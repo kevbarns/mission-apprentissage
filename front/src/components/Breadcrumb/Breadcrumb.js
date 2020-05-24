@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { Breadcrumb, BreadcrumbItem } from "reactstrap";
 
 import useBreadcrumbs from "use-react-router-breadcrumbs";
-import routes from "../../route";
+import routes from "../../routes";
 
 import "./breadcrumb.css";
 
@@ -12,10 +12,10 @@ export default () => {
 
   return (
     <Breadcrumb tag="nav" listTag="div">
-      {breadcrumbs.map(({ match, breadcrumb }, key) => (
+      {breadcrumbs.map(({ match, title }, key) => (
         <BreadcrumbItem key={key}>
           <NavLink exact activeClassName="last" to={match.url}>
-            {breadcrumb}
+            {title}
           </NavLink>
         </BreadcrumbItem>
       ))}

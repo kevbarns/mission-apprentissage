@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setMenuState } from "../../redux/menu/menuAction";
 import TopBar from "../TopBar/TopBar";
 
-import menu from "../../menu";
+import routes from "../../routes";
 import closeButton from "../../media/close-light.svg";
 
 import "./navbar.css";
@@ -27,9 +27,9 @@ const NavContent = ({ dispatch }) => {
         </div>
       </div>
       <Nav vertical>
-        {menu.map(({ title, link, icon }, key) => (
+        {routes.map(({ title, path, icon }, key) => (
           <NavItem key={key}>
-            <NavLink className="pointer" onClick={() => handleClick(link)}>
+            <NavLink className="pointer" onClick={() => handleClick(path)}>
               <span className={`${icon} mr-2`} />
               {title}
             </NavLink>

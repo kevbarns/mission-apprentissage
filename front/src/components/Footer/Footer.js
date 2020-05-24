@@ -1,7 +1,6 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 
-import menu from "../../menu";
+import routes from "../../routes";
 
 import "./footer.css";
 
@@ -12,8 +11,8 @@ const Footer = () => {
       <section className="sitemap">
         <div>
           <h5>Navigation</h5>
-          {menu.map(({ title, link }, key) => (
-            <a key={key} href={!link ? "/" : link}>
+          {routes.map(({ title, path }, key) => (
+            <a key={key} href={!path ? "/" : path}>
               {title}
             </a>
             /**

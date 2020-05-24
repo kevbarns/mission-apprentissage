@@ -1,13 +1,17 @@
+import { Landing, NotFound, Services } from "./pages";
+
 export default [
   {
-    title: "Acceuil",
-    link: "/",
+    component: Landing,
     icon: "icon-esd-dragger-large",
+    path: "/",
+    title: "Acceuil",
   },
   {
-    title: "Catalogue des Services",
-    link: "/catalogue-services",
+    component: Services,
     icon: "icon-esd-catalog",
+    path: "/catalogue-services",
+    title: "Catalogue des Services",
   },
   {
     title: "Documentation",
@@ -36,5 +40,10 @@ export default [
   {
     title: "Contact",
     icon: "icon-esd-contact",
+  },
+  {
+    component: NotFound,
+    path: "/404",
+    title: "404"
   },
 ];
