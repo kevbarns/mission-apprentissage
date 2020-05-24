@@ -1,12 +1,13 @@
 import React from "react";
+import { Redirect } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { Col, Row, Container } from "reactstrap";
 
 import { fetchCatalogue } from "../../redux/catalogue-services/catalogueAction";
 import Breadcumb from "../../components/Breadcrumb";
 import Card from "../../components/Card";
+
 import "./services.css";
-import { Redirect } from "react-router-dom";
 
 export default () => {
   const dispatch = useDispatch();
