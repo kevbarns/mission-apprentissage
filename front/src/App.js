@@ -3,27 +3,20 @@ import { Switch, Route, withRouter } from "react-router-dom";
 
 import Layout from "./components/Layout";
 import ScrollToTop from "./components/ScrollToTop";
-import {
-  Landing,
-  NotFound,
-  Services
-} from "./pages";
 
-import routes from "./routes.json";
+import routes from "./routes";
 
 import "./App.css";
 
-const App = () => {
-  return (
-    <Layout>
-      <ScrollToTop />
-      <Switch>
-        <Route exact path="/" component={Landing} />
-        <Route path={routes.SERVICES} component={Services} />
-        <Route component={NotFound} />
-      </Switch>
-    </Layout>
-  );
-};
+const App = () => (
+  <Layout>
+    <ScrollToTop />
+    <Switch>
+      {routes.map(({ path, component }, key) => (
+        <Route exact path={path} key={key} component={component} />
+      ))}
+    </Switch>
+  </Layout>
+);
 
 export default withRouter(App);
