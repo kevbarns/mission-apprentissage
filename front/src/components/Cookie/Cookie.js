@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setCookieState } from "../../redux/cookie/cookieAction";
 
@@ -20,7 +20,7 @@ export default () => {
         <p className="m-0 text-center">{message}</p>
       </div>
       <div onClick={() => dispatch(setCookieState())}>
-        <img src={icon} />
+        <img alt="logo-fermeture" src={icon} />
       </div>
     </div>
   );

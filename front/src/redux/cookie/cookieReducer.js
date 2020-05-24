@@ -7,7 +7,7 @@ const initialState = {
 export default function cookieReducer(state = initialState, action) {
   switch (action.type) {
     case COOKIE_STATE:
-      return { ...state, state: false };
+      return { ...state, ...action.payload };
     default:
       return state;
   }
