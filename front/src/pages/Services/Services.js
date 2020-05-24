@@ -24,8 +24,8 @@ export default () => {
       <Container className="mt-5 mb-5">
         <Row>
           <Breadcumb />
-          <Col xs="12" className="">
-            <h3 className="">
+          <Col xs="12">
+            <h3>
               <span className="icon-esd-catalog" />
               Catalogue des Services
             </h3>
