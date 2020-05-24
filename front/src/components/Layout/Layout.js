@@ -1,20 +1,15 @@
 import React from "react";
 
-import TopBar from "../TopBar";
 import Footer from "../Footer";
 import Cookie from "../Cookie";
+import Navbar from "../SideNav";
 
 import "./layout.css";
 
-const Layout = ({ children }) => {
-  return (
-    <>
-      <TopBar />
-      <div className="App">{children}</div>
-      <Cookie/>
-      <Footer />
-    </>
-  );
-};
-
-export default Layout;
+export default ({ children }) => (
+  <Navbar>
+    <div className="App">{children}</div>
+    <Cookie />
+    <Footer />
+  </Navbar>
+);
