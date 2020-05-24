@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-import routes from "../../routes.json";
+import menu from "../../menu";
 
 import "./footer.css";
 
@@ -12,7 +12,17 @@ const Footer = () => {
       <section className="sitemap">
         <div>
           <h5>Navigation</h5>
-          <Link to={routes.SERVICES}>Catalogue des Services</Link>
+          {menu.map(({ title, link }, key) => (
+            <a key={key} href={!link ? "/" : link}>
+              {title}
+            </a>
+            /**
+             * SCROLL TO TOP NOT WORKING
+                <NavLink key={key} to={!link ? "/" : link}>
+                  {title}
+                </NavLink>
+             */
+          ))}
         </div>
         <div>
           <h5>Support</h5>
