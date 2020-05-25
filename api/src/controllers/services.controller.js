@@ -6,18 +6,9 @@ function getServices(path) {
     let data = [];
     fs.createReadStream(path)
       .pipe(parse({ delimiter: ",", columns: true }))
-      .on("data", row => {
-        data.push(row);
-      })
-      .on("end", () => {
-        console.log("CSV PARSING SUCCESS");
-        // console.log(data);
-        resolve({ services: data });
-      })
-      .on("error", error => {
-        console.log("ERROR WHILE PARSING CSV", error);
-        reject(error);
-      });
+      .on("data", row => data.push(row))
+      .on("end", () => resolve({ services: data }))
+      .on("error", error => reject(error));
   });
 }
 
